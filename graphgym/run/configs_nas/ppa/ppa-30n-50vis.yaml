@@ -1,0 +1,15 @@
+nas:
+  config_base: run/configs/ppa.yaml
+  config_budget: run/configs/ppa.yaml
+  config_grid: run/grids/graph.txt
+  config_dir: run/results_model/ppa
+  results_dir: run/results_nas/ppa
+  resume_dir: run/resume/ppa
+  metric: accuracy
+  visible_epoch: 50
+  train_py: main_pyg
+  repeat: 3
+  num_explored: 30
+  n_fully_train: 3
+optim:
+  max_epoch: 100

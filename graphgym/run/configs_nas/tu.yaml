@@ -1,0 +1,7 @@
+nas:
+  config_base: run/configs/tu/medium.yaml
+  config_budget: run/configs/tu/medium.yaml
+  config_grid: run/grids/tu.txt 
+  metric: auc
+optim:
+  max_epoch: 100

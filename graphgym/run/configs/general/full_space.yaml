@@ -1,0 +1,27 @@
+# The full search space of GNNs -- [---]
+out_dir: results
+train:
+  batch_size: [16, 32, 64, 128, 512]
+  eval_period: 20
+  ckpt_period: 100
+gnn:
+  layers_pre_mp: [1, 2, 3]
+  layers_mp: [2, 3, 4, 5, 6, 7]
+  layers_post_mp: [1, 2, 3]
+  dim_inner: [32, 64, 128, 256, 512]
+  layer_type: ['linear', 'mlp', 'gcnconv', 'sageconv', 'gatconv', 'gatv2conv', 'splineconv', 'ginconv', 'generalconv', 'generaledgeconv', 'generalsampleedgeconv', 'tagconv', 'armaconv', 'chebconv', 'graphconv', 'transformer']
+  layer_para:  # user defined
+  stage_type: ['stack', 'skipsum', 'skipconcat']
+  batchnorm: [True, False]
+  act: ['relu', 'selu', 'prelu', 'elu', 'lrelu_01', 'lrelu_025', 'lrelu_05', 'swish']
+  dropout: [0, 0.3, 0.5, 0.7]
+  agg: ['add', 'mean', 'max']
+  normalize_adj: [True, False]
+  pool: ['sag', 'topk', 'asap', 'edge']
+  global_pooling: ['add','mean','max']
+optim:
+  optimizer: [sgd, adam]
+  base_lr: [1e-2, 1e-3, 1e-4, 5e-3, 5e-4]
+  max_epoch: [100, 200, 400]
+  momentum: [0.7,0.8,0.9,0.99]
+  weight_decay: [0, 1e-3, 1e-4, 1e-5, 5e-5, 5e-4]

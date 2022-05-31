@@ -1,0 +1,15 @@
+nas:
+  config_base: run/configs/cora.yaml
+  config_budget: run/configs/cora.yaml
+  config_grid: run/grids/node_edgeattr.txt
+  config_dir: run/results_model/cora
+  results_dir: run/results_nas/cora
+  resume_dir: run/resume/cora
+  metric: accuracy
+  visible_epoch: 30
+  train_py: main_pyg
+  repeat: 3
+  num_explored: 300
+  n_fully_train: 5
+optim:
+  max_epoch: 400

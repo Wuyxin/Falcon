@@ -1,0 +1,7 @@
+nas:
+  config_base: run/configs/citeseer.yaml
+  config_budget: run/configs/citeseer.yaml
+  config_grid: run/grids/node_general.txt
+  metric: accuracy
+optim:
+  max_epoch: 100

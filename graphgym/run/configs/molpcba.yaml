@@ -1,0 +1,41 @@
+dataset:
+  format: OGB
+  name: ogbg-molpcba
+  task: graph
+  task_type: multi-tasks-classification
+  node_encoder: True
+  node_encoder_name: Atom
+  edge_encoder: True
+  edge_encoder_name: Bond
+train:
+  batch_size: 128
+  eval_period: 10
+  ckpt_period: 100
+  sampler: full_batch
+model:
+  type: gnn
+  loss_fun: bce
+  edge_decoding: dot
+  graph_pooling: add
+gnn:
+  edge_dim: 32
+  layers_pre_mp: 1
+  layers_mp: 3
+  layers_post_mp: 1
+  dim_inner: 256
+  layer_type: generaledgeconv
+  stage_type: stack
+  batchnorm: True
+  act: relu
+  dropout: 0.0
+  agg: mean
+  normalize_adj: False
+  pool_type: topk
+  pool_loop: 3
+  pool_ratio: 0.5
+optim:
+  optimizer: adam
+  base_lr: 0.001
+  max_epoch: 100
+share:
+  dim_out: 128

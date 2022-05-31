@@ -1,0 +1,25 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TrialConfigMetadataKey = void 0;
+var TrialConfigMetadataKey;
+(function (TrialConfigMetadataKey) {
+    TrialConfigMetadataKey["MACHINE_LIST"] = "machine_list";
+    TrialConfigMetadataKey["LOCAL_CONFIG"] = "local_config";
+    TrialConfigMetadataKey["TRIAL_CONFIG"] = "trial_config";
+    TrialConfigMetadataKey["REMOTE_CONFIG"] = "remote_config";
+    TrialConfigMetadataKey["HYBRID_CONFIG"] = "hybrid_config";
+    TrialConfigMetadataKey["EXPERIMENT_ID"] = "experimentId";
+    TrialConfigMetadataKey["MULTI_PHASE"] = "multiPhase";
+    TrialConfigMetadataKey["RANDOM_SCHEDULER"] = "random_scheduler";
+    TrialConfigMetadataKey["PAI_YARN_CLUSTER_CONFIG"] = "pai_yarn_config";
+    TrialConfigMetadataKey["PAI_CLUSTER_CONFIG"] = "pai_config";
+    TrialConfigMetadataKey["KUBEFLOW_CLUSTER_CONFIG"] = "kubeflow_config";
+    TrialConfigMetadataKey["NNI_MANAGER_IP"] = "nni_manager_ip";
+    TrialConfigMetadataKey["FRAMEWORKCONTROLLER_CLUSTER_CONFIG"] = "frameworkcontroller_config";
+    TrialConfigMetadataKey["DLTS_CLUSTER_CONFIG"] = "dlts_config";
+    TrialConfigMetadataKey["AML_CLUSTER_CONFIG"] = "aml_config";
+    TrialConfigMetadataKey["VERSION_CHECK"] = "version_check";
+    TrialConfigMetadataKey["LOG_COLLECTION"] = "log_collection";
+    TrialConfigMetadataKey["PLATFORM_LIST"] = "platform_list";
+    TrialConfigMetadataKey["SHARED_STORAGE_CONFIG"] = "shared_storage_config";
+})(TrialConfigMetadataKey = exports.TrialConfigMetadataKey || (exports.TrialConfigMetadataKey = {}));

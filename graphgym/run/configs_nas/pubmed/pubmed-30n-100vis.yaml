@@ -1,0 +1,15 @@
+nas:
+  config_base: run/configs/pubmed.yaml
+  config_budget: run/configs/pubmed.yaml
+  config_grid: run/grids/node_edgeattr.txt
+  config_dir: run/results_model/pubmed
+  results_dir: run/results_nas/pubmed
+  resume_dir: run/resume/pubmed
+  metric: accuracy
+  visible_epoch: 100
+  train_py: main_pyg
+  repeat: 3
+  num_explored: 30
+  n_fully_train: 3
+optim:
+  max_epoch: 400

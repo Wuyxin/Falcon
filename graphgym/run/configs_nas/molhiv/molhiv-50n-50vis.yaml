@@ -1,0 +1,15 @@
+nas:
+  config_base: run/configs/molhiv.yaml
+  config_budget: run/configs/molhiv.yaml
+  config_grid: run/grids/graph.txt
+  config_dir: run/results_model/molhiv
+  results_dir: run/results_nas/molhiv
+  resume_dir: run/resume/molhiv
+  metric: auc
+  visible_epoch: 50
+  train_py: main_pyg
+  repeat: 3
+  num_explored: 50
+  n_fully_train: 5
+optim:
+  max_epoch: 100

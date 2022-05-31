@@ -1,0 +1,15 @@
+nas:
+  config_base: run/configs/code2.yaml
+  config_budget: run/configs/code2.yaml
+  config_grid: run/grids/code2.txt
+  config_dir: run/results_model/code2
+  results_dir: run/results_nas/code2
+  resume_dir: run/resume/code2
+  metric: auc
+  visible_epoch: 3
+  train_py: main_pyg
+  repeat: 3
+  num_explored: 3
+  n_fully_train: 1
+optim:
+  max_epoch: 10

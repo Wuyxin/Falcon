@@ -1,0 +1,41 @@
+dataset:
+  format: OGB
+  name: ogbg-ppa
+  task: graph
+  task_type: classification
+  node_encoder: False
+  node_encoder_name: Atom
+  edge_encoder: False
+  edge_encoder_name: Bond
+  edge_dim: 7
+share:
+  dim_out: 37
+train:
+  batch_size: 32
+  eval_period: 10
+  ckpt_period: 100
+  sampler: full_batch
+model:
+  type: gnn
+  loss_fun: cross_entropy
+  edge_decoding: dot
+  graph_pooling: add
+gnn:
+  layers_pre_mp: 2
+  layers_mp: 4
+  layers_post_mp: 2
+  dim_inner: 256
+  layer_type: generaledgeconv
+  stage_type: stack
+  batchnorm: True
+  act: relu
+  dropout: 0.0
+  agg: mean
+  normalize_adj: False
+  pool_type: topk
+  pool_loop: 2
+  pool_ratio: 0.5
+optim:
+  optimizer: adam
+  base_lr: 0.01
+  max_epoch: 100
