@@ -51,12 +51,12 @@ We run the experiments of AutoAttend and GASSO in their original repos, and we a
 ### (d) Start searching!
 Finally, we can simply run the cmds to run [algorithm] on a search configuration defined in [nas_cfg_file]:
 ```
-python -m run.main_automl.py --cfg [nas_cfg_file] --algo [algorithm]
+python -m run.main_automl --cfg [nas_cfg_file] --algo [algorithm]
 ```
 
 For example, for the ogbn-arxiv node classification task in our paper, run
 ```
-python -m run.main_automl.py --cfg run/configs_nas/arxiv.yaml --algo falcon
+python -m run.main_automl --cfg run/configs_nas/arxiv.yaml --algo falcon
 ```
 
 ## Image Task
