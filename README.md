@@ -2,7 +2,7 @@
 
 Updated on 10/6/2022.
 
-We provide implementations of Falcon on two popular platforms: GraphGym (https://github.com/snap-stanford/GraphGym) and NNI (https://github.com/microsoft/nni). 
+We provide implementations of Falcon on two popular platforms: [GraphGym](https://github.com/snap-stanford/GraphGym) and [NNI](https://github.com/microsoft/nni). 
 
 Quick location of Falcon implementations: [`graphgym.automl.algorithms.Falcon`](https://anonymous.4open.science/r/Falcon/graphgym/graphgym/automl/algorithms/falcon.py) and [`nni.retiarii.strategy.FalconTrainer`](https://anonymous.4open.science/r/Falcon/nni/nni/retiarii/strategy/falcon.py).
 
@@ -26,10 +26,8 @@ pip install -r requirements.txt
 ## Graph Tasks 
 We follow [GraphGym](https://github.com/snap-stanford/GraphGym) to construct our code. The details of GraphGym can be found in the original repo, while we also provide a short introduction here.
 
-To run the graph tasks in our paper, go to the graphgym directory:
-```
-cd graphgym
-```
+To run the graph tasks in our paper, go to the graphgym directory via `cd graphgym`.
+
 ### (a) Define search space and base design
 
 Please follow the format in `run/grids/example.txt` to create a flexible design space! The search spaces used in the paper are defined in `run/grids/node_general.txt` (for node classification except for Reddit) and `run/grids/node.txt` (for Reddit), and `/run/grids/graph.txt` (for graph classifications).
@@ -60,11 +58,7 @@ python -m run.main_automl --cfg run/configs_nas/arxiv.yaml --algo falcon
 ```
 
 ## Image Task
-To run the image task in our paper, go to the nni directory:
-```
-cd nni
-```
-Similar to graph tasks, searching for the best designs on an image task requires the three components
+To run the image task in our paper, go to the nni directory. Similar to graph tasks, searching for the best designs on an image task requires the three components
 ### (a) Search space 
  
 We use `nni.LayerChoice` module to define the search space on top of a base design. Thus users don't have to define the base design separately. For hyper-parameters, simply define the space in a dict format, e.g., \{design_variable: [candidate values]\}.
