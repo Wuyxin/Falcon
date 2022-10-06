@@ -9,14 +9,6 @@ from pandas import DataFrame
 
 from graphgym.config import cfg
 
-# _list = [
-#     'metagnas', 'metag_mse', 'metag_mse_edrop', 
-#     'metag_mse_perf',
-#     'metag_edrop', 'metag_perf', 
-#     'metag_edrop_perf', 'metag_perf_self', 
-#     'metag_edrop_perf_self', 'metag_mse_edrop_perf_self'
-#     ]
-
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument(

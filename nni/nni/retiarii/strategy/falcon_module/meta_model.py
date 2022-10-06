@@ -16,8 +16,13 @@ def overload(func):
                 g = kwargs['graph']
             return func(args[0], g)
         elif len(args) +  len(kwargs) == 4:
-            assert len(kwargs) == 3
-            return func(args[0], Data(**kwargs))
+            if len(kwargs) == 3:
+                return func(args[0], Data(**kwargs))
+            if len(kwargs) == 2:
+                return func(args[0], Data(x=args[1], **kwargs))
+            if len(kwargs) == 1:
+                return func(args[0], Data(x=args[1], edge_index=args[2], **kwargs))
+
         else:
             raise TypeError
     return wrapper
