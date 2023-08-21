@@ -1,7 +1,5 @@
 # FALCON: Efficient Automatic Machine Learning via Design Graphs
 
-Updated on 10/6/2022.
-
 We provide implementations of Falcon on two popular platforms: [GraphGym](https://github.com/snap-stanford/GraphGym) and [NNI](https://github.com/microsoft/nni). 
 
 Quick location of Falcon implementations: [`graphgym.automl.algorithms.Falcon`](https://anonymous.4open.science/r/Falcon/graphgym/graphgym/automl/algorithms/falcon.py) and [`nni.retiarii.strategy.FalconTrainer`](https://anonymous.4open.science/r/Falcon/nni/nni/retiarii/strategy/falcon.py).
